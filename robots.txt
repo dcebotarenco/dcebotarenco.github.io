@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://dcebotarenco.githug.io/sitemap.xml
+Sitemap: https://dcebotarenco.github.io/sitemap.xml
