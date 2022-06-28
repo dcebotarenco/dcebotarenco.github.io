@@ -1,1 +1,1 @@
-# dcebotarenco.githug.io
+# dcebotarenco.github.io
