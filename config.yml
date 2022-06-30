@@ -37,7 +37,6 @@ params:
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: true
-  disqusShortname: dcebotarenco-github-io
   hidemeta: false
   hideSummary: false
   showtoc: false
@@ -101,4 +100,6 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+disqusShortname: dcebotarenco-github-io
 
