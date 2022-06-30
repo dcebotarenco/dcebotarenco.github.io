@@ -14,6 +14,8 @@ minify:
   disableXML: true
   minifyOutput: true
 
+disqusShortname: dcebotarenco-github-io
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: dcebotarenco Blog
@@ -28,9 +30,9 @@ params:
 
   ShowReadingTime: true
   ShowShareButtons: true
-  ShowPostNavLinks: true
+  ShowPostNavLinks: false
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -101,5 +103,5 @@ markup:
     # lineNos: true
     # style: monokai
 
-disqusShortname: dcebotarenco-github-io
+
 
