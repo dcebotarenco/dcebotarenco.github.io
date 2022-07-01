@@ -19,15 +19,13 @@ disqusShortname: dcebotarenco-github-io
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: dcebotarenco Blog
-  description: "dcebotarenco Blog"
-  keywords: [Blog, Portfolio]
+  description: "a Blog about coding in Java"
+  keywords: [Blog, Portfolio, dcebotarenco]
   author: dcebotarenco
-  # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: false
@@ -58,12 +56,15 @@ params:
     icon: 'web-programming.png'
     iconHeight: 35
 
-  # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: My blog about coding 
-
+  profileMode:
+    enabled: true
+    title: "\\>> Hello 👋"
+    subTitle: I'm Java developer, father
+    imageUrl: 'profile-picture.jpeg'
+    
   socialIcons:
+    - name: linkedin
+      url: 'https://www.linkedin.com/in/dan-cebotarenco-68bbb075'
     - name: twitter
       url: "https://twitter.com/dancebotarenco"
     - name: github
@@ -103,5 +104,17 @@ markup:
     # lineNos: true
     # style: monokai
 
-
+# Site-wide navigation
+menu:
+  main:
+    - weight : 1
+      identifier : "about"
+      name : "About"
+      title : "About"
+      url : "/about/"
+    - weight : 2
+      identifier : "blog"
+      name : "Blog"
+      title : "Blog"
+      url : "/posts/"
 
