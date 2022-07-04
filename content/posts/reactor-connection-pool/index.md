@@ -1,12 +1,12 @@
 ---
-title: "🍃 Spring WebClient and Connection Pool"
+title: "🍃 Spring WebClient & Connection Pool"
 date: 2022-06-29T09:37:22+03:00
 draft: false
 ---
 
 
-# 🔖 TLTR
-Configure `evictInBackground`, `maxIdleTime` and `maxLifeTime` to clear connections from the connection pool or use `RestTemplate`
+# 🧑‍🎓 tltr
+[Configure](https://projectreactor.io/docs/netty/release/reference/index.html#connection-pool-timeout) `evictInBackground`, `maxIdleTime` and `maxLifeTime` to clear connections from the connection pool or [retry](https://projectreactor.io/docs/core/release/reference/#_retrying) the call or use [RestTemplate](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#webmvc-resttemplate)
 
 # 🐛 Issue
 At one of my clients, it was decided no more `RestTemplate`, all move to 🍃 [*Spring WebClient*](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/boot-features-webclient.html). I consider this project very interesting, but it comes with a different mindset which developers do not pay attention to:
@@ -26,27 +26,28 @@ reactor.core.Exceptions$ReactiveException: io.netty.channel.unix.Errors$NativeIo
 ```
 
 ### Logs
+IPs are cleared.
 ```
 ./catalina.out-20211223.gz:2021-12-22 19:04:34.458 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36] REGISTERED
-./catalina.out-20211223.gz:2021-12-22 19:04:34.460 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36] CONNECT: rest.apisandbox.zuora.com/23.51.179.247:443
+./catalina.out-20211223.gz:2021-12-22 19:04:34.460 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36] CONNECT: rest.apisandbox.server.com/1.1.1.1:443
 
 ...time...
 
-./catalina.out-20211224.gz:2021-12-23 08:26:16.138 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/10.0.6.36:55868 - R:rest.apisandbox.zuora.com/23.51.179.247:443] READ COMPLETE
-./catalina.out-20211224.gz:2021-12-23 08:26:16.138 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/10.0.6.36:55868 - R:rest.apisandbox.zuora.com/23.51.179.247:443] EXCEPTION: io.netty.channel.unix.Errors$NativeIoException: readAddress(..) failed: Connection reset by peer
-./catalina.out-20211224.gz:2021-12-23 08:26:16.139  WARN --- [or-http-epoll-3] r.netty.http.client.HttpClientConnect    : [30857d36-92, L:/10.0.6.36:55868 - R:rest.apisandbox.zuora.com/23.51.179.247:443] The connection observed an error, the request cannot be retried as the headers/body were sent
-./catalina.out-20211224.gz:2021-12-23 08:26:16.139 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/10.0.6.36:55868 ! R:rest.apisandbox.zuora.com/23.51.179.247:443] USER_EVENT: SslCloseCompletionEvent(java.nio.channels.ClosedChannelException)
-./catalina.out-20211224.gz:2021-12-23 08:26:16.139 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/10.0.6.36:55868 ! R:rest.apisandbox.zuora.com/23.51.179.247:443] INACTIVE
-./catalina.out-20211224.gz:2021-12-23 08:26:16.139 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/10.0.6.36:55868 ! R:rest.apisandbox.zuora.com/23.51.179.247:443] UNREGISTERED
+./catalina.out-20211224.gz:2021-12-23 08:26:16.138 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/0.0.0.0:55868 - R:rest.apisandbox.server.com/1.1.1.1:443] READ COMPLETE
+./catalina.out-20211224.gz:2021-12-23 08:26:16.138 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/0.0.0.0:55868 - R:rest.apisandbox.server.com/1.1.1.1:443] EXCEPTION: io.netty.channel.unix.Errors$NativeIoException: readAddress(..) failed: Connection reset by peer
+./catalina.out-20211224.gz:2021-12-23 08:26:16.139  WARN --- [or-http-epoll-3] r.netty.http.client.HttpClientConnect    : [30857d36-92, L:/0.0.0.0:55868 - R:rest.apisandbox.server.com/1.1.1.1:443] The connection observed an error, the request cannot be retried as the headers/body were sent
+./catalina.out-20211224.gz:2021-12-23 08:26:16.139 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/0.0.0.0:55868 ! R:rest.apisandbox.server.com/1.1.1.1:443] USER_EVENT: SslCloseCompletionEvent(java.nio.channels.ClosedChannelException)
+./catalina.out-20211224.gz:2021-12-23 08:26:16.139 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/0.0.0.0:55868 ! R:rest.apisandbox.server.com/1.1.1.1:443] INACTIVE
+./catalina.out-20211224.gz:2021-12-23 08:26:16.139 DEBUG --- [or-http-epoll-3] reactor.netty.http.client.HttpClient     : [30857d36-92, L:/0.0.0.0:55868 ! R:rest.apisandbox.server.com/1.1.1.1:443] UNREGISTERED
 ```
 
 # 🕵️‍♂️ Investigation
 We can confirm the connection is broken based on the symbols between the IPs:
 ```
 //Good connection
-[30857d36-92, L:/10.0.6.36:55868 - R:rest.apisandbox.zuora.com/23.51.179.247:443]
+[30857d36-92, L:/0.0.0.0:55868 - R:rest.apisandbox.server.com/1.1.1.1:443]
 //Bad connection
-[30857d36-92, L:/10.0.6.36:55868 ! R:rest.apisandbox.zuora.com/23.51.179.247:443]
+[30857d36-92, L:/0.0.0.0:55868 ! R:rest.apisandbox.server.com/1.1.1.1:443]
 ```
 #### The legend
 - `-` means the connection is OK
@@ -56,9 +57,9 @@ We can confirm the connection is broken based on the symbols between the IPs:
 
 ### Example
 ```
-2021-12-23 08:26:23.069 DEBUG --- [or-http-epoll-2] reactor.netty.http.client.HttpClient     : [338e870a-97, L:/10.0.6.36:55864 ! R:rest.apisandbox.zuora.com/23.51.179.247:443] USER_EVENT: SslCloseCompletionEvent(java.nio.channels.ClosedChannelException)
-2021-12-23 08:26:23.069 DEBUG --- [or-http-epoll-2] reactor.netty.http.client.HttpClient     : [338e870a-97, L:/10.0.6.36:55864 ! R:rest.apisandbox.zuora.com/23.51.179.247:443] INACTIVE
-2021-12-23 08:26:23.069 DEBUG --- [or-http-epoll-2] reactor.netty.http.client.HttpClient     : [338e870a-97, L:/10.0.6.36:55864 ! R:rest.apisandbox.zuora.com/23.51.179.247:443] UNREGISTERED
+2021-12-23 08:26:23.069 DEBUG --- [or-http-epoll-2] reactor.netty.http.client.HttpClient     : [338e870a-97, L:/0.0.0.0:55864 ! R:rest.apisandbox.server.com/1.1.1.1:443] USER_EVENT: SslCloseCompletionEvent(java.nio.channels.ClosedChannelException)
+2021-12-23 08:26:23.069 DEBUG --- [or-http-epoll-2] reactor.netty.http.client.HttpClient     : [338e870a-97, L:/0.0.0.0:55864 ! R:rest.apisandbox.server.com/1.1.1.1:443] INACTIVE
+2021-12-23 08:26:23.069 DEBUG --- [or-http-epoll-2] reactor.netty.http.client.HttpClient     : [338e870a-97, L:/0.0.0.0:55864 ! R:rest.apisandbox.server.com/1.1.1.1:443] UNREGISTERED
 ```
 
 ### The problem
@@ -90,7 +91,7 @@ class WebClientConfiguration {
     private static final Logger log = LoggerFactory.getLogger(WebClientConfiguration.class);
 
     @Bean
-    WebClient zuoraWebClient(Environment config) {
+    WebClient yourWebClient(Environment config) {
         ConnectionProvider connectionProvider = ConnectionProvider.builder("http-connection-pool")
             .maxConnections(50) //a number of connections
             .maxIdleTime(Duration.ofSeconds(30))) //max time to stay in the pool in idle state
@@ -103,37 +104,14 @@ class WebClientConfiguration {
         HttpClient httpClient = HttpClient.create(connectionProvider)
             .responseTimeout(Duration.ofSeconds(10))) //close connection, when no data was read within 10 seconds after the socket was initialized.
             .compress(true)
-            .wiretap(HttpClient.class.getName(), LogLevel.DEBUG, AdvancedByteBufFormat.SIMPLE)
+            .wiretap(HttpClient.class.getName(), LogLevel.DEBUG, AdvancedByteBufFormat.SIMPLE) //print wiretap logs only when HttpClient logger is on DEBUG
             .metrics(true, Function.identity());
 
         return WebClient.builder()
             .clientConnector(new ReactorClientHttpConnector(httpClient))
             .baseUrl('baseUrl')
-            .defaultHeaders(headers -> {
-                HttpHeaders httpHeaders = createHttpHeadersWithBasicAuth('user','password');
-                headers.addAll(httpHeaders);
-            })
-            .filter(ExchangeFilterFunction.ofRequestProcessor(r -> {
-                log.debug("Request url: {} {} {}", r.method(), r.url(), r.logPrefix());
-                log.debug("Request headers: {} {}", r.headers().entrySet(), r.logPrefix());
-                return Mono.just(r);
-            }))
-            .filter(ExchangeFilterFunction.ofResponseProcessor(r -> {
-                log.debug("Response status: {} {}", r.statusCode(), r.logPrefix());
-                log.debug("Response headers: {} {}", r.headers().asHttpHeaders().entrySet(), r.logPrefix());
-                return Mono.just(r);
-            }))
             .build();
     }
-
-    private HttpHeaders createHttpHeadersWithBasicAuth(String username, String password) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-        headers.setBasicAuth(username, password);
-        return headers;
-    }
-
 }
 
 ```
@@ -146,7 +124,7 @@ class WebClientConfiguration {
 
 
 That's pretty much it. \
-You just have to monitor the throughput, see if a tweak of settings is needed.
+You just have to monitor the throughput, see if a tweak of settings is needed. The reactor connection pool is pretty the same as a JDBC connection pool.
 
 
 Btw, the same strategy can be applied for the famous prematurely closed exception cases. \

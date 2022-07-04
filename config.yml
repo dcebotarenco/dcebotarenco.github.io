@@ -45,15 +45,15 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "web-programming.png"
-    favicon16x16: "web-programming.png"
-    favicon32x32: "web-programming.png"
-    apple_touch_icon: "web-programming.png"
-    safari_pinned_tab: "web-programming.png"
+    favicon: "icon.png"
+    favicon16x16: "icon.png"
+    favicon32x32: "icon.png"
+    apple_touch_icon: "icon.png"
+    safari_pinned_tab: "icon.png"
 
   label:
     text: "dcebotarenco's Blog"
-    icon: 'web-programming.png'
+    icon: 'icon.png'
     iconHeight: 35
 
   profileMode:

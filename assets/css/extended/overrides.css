@@ -1,3 +1,7 @@
 main {
     --main-width: 850px;
 }
+
+.post-content code {
+    color: brown
+}
