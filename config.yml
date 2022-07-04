@@ -1,6 +1,6 @@
 baseURL: "https://dcebotarenco.github.io/"
 languageCode: "en-us"
-title: "dcebotarenco Blog"
+title: "dcebotarenco"
 theme: "PaperMod"
 paginate: 5
 enableRobotsTXT: true
@@ -18,7 +18,7 @@ disqusShortname: dcebotarenco-github-io
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: dcebotarenco Blog
+  title: dcebotarenco
   description: "a Blog about coding in Java"
   keywords: [Blog, Portfolio, dcebotarenco]
   author: dcebotarenco
@@ -52,14 +52,14 @@ params:
     safari_pinned_tab: "icon.png"
 
   label:
-    text: "dcebotarenco's Blog"
+    text: "dcebotarenco"
     icon: 'icon.png'
     iconHeight: 35
 
   profileMode:
     enabled: true
-    title: "\\>> Hello 👋"
-    subTitle: I'm Java developer, father
+    title: "\\>> Hello, I'm Dan 👋"
+    subTitle: Java developer, father
     imageUrl: 'profile-picture.jpeg'
     
   socialIcons:
