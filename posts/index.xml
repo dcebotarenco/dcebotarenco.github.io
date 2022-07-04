@@ -10,14 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jun 2022 16:39:12 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jun 2022 09:37:22 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://dcebotarenco.github.io/posts/test/</link>
-      <pubDate>Thu, 30 Jun 2022 16:39:12 +0300</pubDate>
+      <title>🍃 Spring WebClient &amp; Connection Pool</title>
+      <link>https://dcebotarenco.github.io/posts/reactor-connection-pool/</link>
+      <pubDate>Wed, 29 Jun 2022 09:37:22 +0300</pubDate>
       
-      <guid>https://dcebotarenco.github.io/posts/test/</guid>
-      <description>Test</description>
+      <guid>https://dcebotarenco.github.io/posts/reactor-connection-pool/</guid>
+      <description>🧑‍🎓 tltr Configure evictInBackground, maxIdleTime and maxLifeTime to clear connections from the connection pool or retry the call or use RestTemplate
+🐛 Issue At one of my clients, it was decided no more RestTemplate, all move to 🍃 Spring WebClient. I consider this project very interesting, but it comes with a different mindset which developers do not pay attention to:
+Non-blocking Event driven Connection pool Back to the client. After each deployment, in a matter of days, we were getting - the connection reset by the peer.</description>
     </item>
     
   </channel>
