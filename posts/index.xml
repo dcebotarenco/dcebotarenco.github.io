@@ -10,7 +10,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jun 2022 09:37:22 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 17:02:01 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🔥 High CPU usage on faulty endpoint</title>
+      <link>https://dcebotarenco.github.io/posts/high-cpu-usage-while-loop/</link>
+      <pubDate>Fri, 01 Jul 2022 17:02:01 +0300</pubDate>
+      
+      <guid>https://dcebotarenco.github.io/posts/high-cpu-usage-while-loop/</guid>
+      <description>🧑‍🎓 tltr Infinite while loop was causing the issue. Write unit tests. Test the exit condition of your while loops.
+🐛 Issue We had some kind of serious performance issue on production. The CPU periodically was pegged at 100% and stayed that way until we restarted the Tomcat. It was degrading the overall site performance for quite a while. We had two instances with peak similarly in CPU. Seems like it must be something inside the Tomcat since that&amp;rsquo;s what is eating the CPU.</description>
+    </item>
+    
     <item>
       <title>🍃 Spring WebClient &amp; Connection Pool</title>
       <link>https://dcebotarenco.github.io/posts/reactor-connection-pool/</link>
