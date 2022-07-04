@@ -1,7 +1,7 @@
 ---
 title: "🔥 High CPU usage on faulty endpoint"
 date: 2022-07-01T17:02:01+03:00
-draft: true
+draft: false
 ---
 
 # 🧑‍🎓 tltr
