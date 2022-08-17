@@ -124,3 +124,7 @@ The stream: `1 2 3 4 5 6 7 8 9`
 
 
 
+### 📚 Read more
+
+[Sink definition](https://en.wikipedia.org/wiki/Sink_(computing)#In_stream_processing) \
+[Stream API documentation](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
