@@ -10,7 +10,19 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jul 2022 17:02:01 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Aug 2022 10:15:24 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🪤 Peek &amp; Filter Stream API</title>
+      <link>https://dcebotarenco.github.io/posts/stream-api-question/</link>
+      <pubDate>Tue, 16 Aug 2022 10:15:24 +0300</pubDate>
+      
+      <guid>https://dcebotarenco.github.io/posts/stream-api-question/</guid>
+      <description>🧑‍🎓 tltr 1234 Print is executed multiple times till the first value that matches both filter conditions is found.
+❓Question //What is the output? IntStream.range(1, 10) .peek(System.out::print) .filter(i -&amp;gt; i &amp;gt; 2) //A .filter(i -&amp;gt; i &amp;gt; 3) //B .findFirst(); 🕵️‍♂️ Explanation Let&amp;rsquo;s simplify it
+IntStream.range(1, 10); This won&amp;rsquo;t do anything because there is no terminal operation which triggers the reading from the source stream.
+By adding the peek, which is an intermediate operation, the behaviour won&amp;rsquo;t change.</description>
+    </item>
+    
     <item>
       <title>🔥 High CPU usage on faulty endpoint</title>
       <link>https://dcebotarenco.github.io/posts/high-cpu-usage-while-loop/</link>
