@@ -44,5 +44,15 @@ By adding the peek, which is an intermediate operation, the behaviour won&amp;rs
 Non-blocking Event driven Connection pool Back to the client. After each deployment, in a matter of days, we were getting - the connection reset by the peer.</description>
     </item>
     
+    <item>
+      <title>🤖 Skype bot</title>
+      <link>https://dcebotarenco.github.io/posts/skype-bot/</link>
+      <pubDate>Tue, 07 Feb 2017 09:37:22 +0300</pubDate>
+      
+      <guid>https://dcebotarenco.github.io/posts/skype-bot/</guid>
+      <description>Intro Once I read a post about a guy who was searching for an apartment in San Francisco. He was annoyed about the fact that searching for “How to find an apartment in San Francisco” on Google yields dozens of pages of advice as a good indicator of apartment hunting and this is a painful process.
+So he decided to implement a bot in Slack that would help him to search an apartment based on scraping data from websites and notifying him about the cheapest and closest apartment around him.</description>
+    </item>
+    
   </channel>
 </rss>
