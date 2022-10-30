@@ -54,6 +54,15 @@ Non-blocking Event driven Connection pool Back to the client. After each deploym
     </item>
     
     <item>
+      <title>💪 Power of Bash</title>
+      <link>https://dcebotarenco.github.io/posts/power-of-bash/</link>
+      <pubDate>Mon, 27 Feb 2017 20:11:06 +0200</pubDate>
+      
+      <guid>https://dcebotarenco.github.io/posts/power-of-bash/</guid>
+      <description>We all tend to do our work faster because time costs money. I realized that we lose a lot of time waiting for IDE to start. I use Netbeans IDE and all our work is related to it. For Java modules, we use Maven and, of course, we have some custom goals. Some goals are pure Java, though we have some goals that use SVN for committing, logging, reverting and so on.</description>
+    </item>
+    
+    <item>
       <title>🤖 Skype bot</title>
       <link>https://dcebotarenco.github.io/posts/skype-bot/</link>
       <pubDate>Tue, 07 Feb 2017 09:37:22 +0300</pubDate>
