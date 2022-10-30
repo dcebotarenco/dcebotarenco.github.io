@@ -17,7 +17,7 @@ minify:
 disqusShortname: dcebotarenco-github-io
 
 outputs:
-  posts:
+  home:
     - HTML
     - RSS
     - JSON # is necessary
