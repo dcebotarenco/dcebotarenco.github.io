@@ -16,10 +16,16 @@ minify:
 
 disqusShortname: dcebotarenco-github-io
 
+outputs:
+  posts:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: dcebotarenco
-  description: "a Blog about coding in Java"
+  description: "a Blog about coding in Java and others"
   keywords: [Blog, Portfolio, dcebotarenco]
   author: dcebotarenco
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -28,7 +34,7 @@ params:
   disableThemeToggle: false
   ShowReadingTime: true
   ShowShareButtons: true
-  ShowPostNavLinks: false
+  ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowWordCount: true
@@ -98,11 +104,11 @@ pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
     # lineNos: true
-    # style: monokai
+    style: monokai
 
 # Site-wide navigation
 menu:
@@ -117,4 +123,7 @@ menu:
       name : "Blog"
       title : "Blog"
       url : "/posts/"
+    - weight: 3
+      name: Search
+      url: /search/
 
