@@ -103,12 +103,12 @@ params:
 pygmentsUseClasses: true
 markup:
   highlight:
-    noClasses: false
+    noClasses: true
     anchorLineNos: true
     codeFences: true
     guessSyntax: true
-    # lineNos: true
-    style: monokai
+    lineNos: true
+    style: idea
 
 # Site-wide navigation
 menu:
