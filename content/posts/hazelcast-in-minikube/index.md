@@ -284,7 +284,7 @@ minikube tunnel
 ```
 
 ```bash
-curl http://localhost/mega/actuator/loggers/rootcurl http://localhost/mega/actuator/loggers/root
+curl http://localhost/mega/actuator/loggers/root
 
 {"effectiveLevel":"INFO"}
 ```
