@@ -274,8 +274,8 @@ kubectl get pods
 kubectl port-forward hazelcast-center-6f9b687779-krvl7 8080:8080  
 ```
 Open management center in browser `localhost:8080`. If you don't see both members in the cluster, you can downscale the pods, they will appear.
-[Config](./images/config.png)
-
+![Config](./images/config.png)
+![Members](./images/5702.png)
 ### Ingress
 We can also access our service via ingress on path `localhost/mega`.
 Before that enable minikube ingress tunneling:
@@ -285,8 +285,7 @@ minikube tunnel
 
 ```bash
 curl http://localhost/mega/actuator/loggers/root
-
-{"effectiveLevel":"INFO"}
+# {"effectiveLevel":"INFO"}
 ```
 
 Play with the incremental Hazelcast upgrade by building new images and upgrading the Helm chart.
