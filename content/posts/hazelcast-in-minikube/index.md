@@ -1,7 +1,7 @@
 ---
 title: "⛅ Hazelcast in minikube"
 date: 2022-11-09T19:00:00+02:00
-draft: true
+draft: false
 ---
 
 # Build a Spring-boot Hazelcast cluster in Kubernetes
@@ -25,7 +25,7 @@ We cannot push to any cloud image registries like Azure Container Registry, say 
 Create a spring boot microservice let's call it `my-service`
 
 ### Code configuration
-Hazelcast uses by default cluster name `dev`. For the POC we will name it `hazelcast-cluster`. We also provide the cluster DNS name `hazelcast-dns.default.svc.cluster.local`. You can externalize it in a property as well. I also changed the default port to `5702` for sake of demo
+Hazelcast uses by default cluster name `dev`. For the POC we will name it `hazelcast-cluster`. We also provide the cluster DNS name `hazelcast-dns.default.svc.cluster.local`. You can externalize it in a property as well. I also changed the default port to `5702` for sake of the demo
 
 ```java
 @Bean
@@ -289,5 +289,5 @@ curl http://localhost/mega/actuator/loggers/rootcurl http://localhost/mega/actua
 {"effectiveLevel":"INFO"}
 ```
 
-Test the incremental Hazelcast upgrade by building new images and upgrading the Helm chart.
+Play with the incremental Hazelcast upgrade by building new images and upgrading the Helm chart.
 Happy Helming
