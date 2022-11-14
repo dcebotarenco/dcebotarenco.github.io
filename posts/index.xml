@@ -10,17 +10,26 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Aug 2022 10:15:24 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 19:00:00 +0200</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>⛅ Hazelcast in minikube</title>
+      <link>https://dcebotarenco.github.io/posts/hazelcast-in-minikube/</link>
+      <pubDate>Wed, 09 Nov 2022 19:00:00 +0200</pubDate>
+      
+      <guid>https://dcebotarenco.github.io/posts/hazelcast-in-minikube/</guid>
+      <description>Build a Spring-boot Hazelcast cluster in Kubernetes For local testing purposes, you might want to have a cluster of microservices that use Hazelcast where you can watch the replication, rollout of pods and test some Kubernetes infrastructure-related changes.
+Prerequisites Docker minikube kubectl helm minikube Dashboard or Lens Goal Deploy a spring-boot hazelcast cluster locally using helm and connect to it via hazelcast management center Isolate the POC in a separate environment and play with the same microservices and Hazelcast upgrades Limitations We cannot push to any cloud image registries like Azure Container Registry, say it&amp;rsquo;s forbidden by the security policy.</description>
+    </item>
+    
     <item>
       <title>🪤 Peek &amp; Filter Stream API</title>
       <link>https://dcebotarenco.github.io/posts/stream-api-question/</link>
       <pubDate>Tue, 16 Aug 2022 10:15:24 +0300</pubDate>
       
       <guid>https://dcebotarenco.github.io/posts/stream-api-question/</guid>
-      <description>🧑‍🎓 tltr 1234 Print is executed multiple times till the first value that matches both filter conditions is found.
-❓Question //What is the output? IntStream.range(1, 10) .peek(System.out::print) .filter(i -&amp;gt; i &amp;gt; 2) //A .filter(i -&amp;gt; i &amp;gt; 3) //B .findFirst(); 🕵️‍♂️ Explanation Let&amp;rsquo;s simplify it
-IntStream.range(1, 10); This won&amp;rsquo;t do anything because there is no terminal operation which triggers the reading from the source stream.
-By adding the peek, which is an intermediate operation, the behaviour won&amp;rsquo;t change.</description>
+      <description>🧑‍🎓 tltr 1 1234 Print is executed multiple times till the first value that matches both filter conditions is found.
+❓Question 1 2 3 4 5 6 //What is the output? IntStream.range(1, 10) .peek(System.out::print) .filter(i -&amp;gt; i &amp;gt; 2) //A .filter(i -&amp;gt; i &amp;gt; 3) //B .findFirst(); 🕵️‍♂️ Explanation Let&amp;rsquo;s simplify it
+1 IntStream.range(1, 10); This won&amp;rsquo;t do anything because there is no terminal operation which triggers the reading from the source stream.</description>
     </item>
     
     <item>
