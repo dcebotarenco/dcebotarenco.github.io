@@ -29,7 +29,7 @@ Hazelcast uses by default cluster name `dev`. For the POC we will name it `hazel
 
 ```java
 @Bean
-public Config config(HazelcastSettings hazelcastSettings) {
+public Config config() {
     Config config = new Config();
     config.setInstanceName("my-service");
     config.setClusterName("hazelcast-cluster");
