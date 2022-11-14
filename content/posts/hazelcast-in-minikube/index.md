@@ -125,8 +125,15 @@ minikube start
 minikube addons enable ingress #for ingress
 minikube addons enable registry #for registry 
 ```
+### Publish docker image
+Usually, Helm will fetch it from a container registry. Be we cannot. If we deploy now the Chart, Helm won't see the docker image
+We have 2 options:
+1. [The easy way](https://minikube.sigs.k8s.io/docs/handbook/pushing/#7-loading-directly-to-in-cluster-container-runtime). Upload the image manually from the host into minikube 
+2. The hard way. Create a registry. Details here: 
+* [Registry](https://minikube.sigs.k8s.io/docs/handbook/registry) 
+* [Docker Registry](https://docs.docker.com/registry)
 
-### Load image in minikube
+#### Load image in minikube
 ```bash
 minikube image load my-service:1.0  
 ```
@@ -229,13 +236,6 @@ spec:
                   number: 8081
 
 ```
-### Publish docker image
-Usually, Helm will fetch it from a container registry. Be we cannot. If we deploy now the Chart, Helm won't see the docker image
-We have 2 options:
-1. [The easy way](https://minikube.sigs.k8s.io/docs/handbook/pushing/#7-loading-directly-to-in-cluster-container-runtime). Upload the image manually from the host into minikube 
-2. The hard way. Create a registry. Details here: 
-* [Registry](https://minikube.sigs.k8s.io/docs/handbook/registry) 
-* [Docker Registry](https://docs.docker.com/registry)
 
 ### Deploy Helm Chart in minikube
 Some Helm commands that you might want to use
