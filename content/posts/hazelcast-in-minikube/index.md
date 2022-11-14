@@ -2,6 +2,7 @@
 title: "⛅ Hazelcast in minikube"
 date: 2022-11-09T19:00:00+02:00
 draft: false
+image: "/blog/myarticle/images/5702.jpg"
 ---
 
 # Build a Spring-boot Hazelcast cluster in Kubernetes
@@ -110,7 +111,7 @@ my-service:1.0 \
 docker run -p 8080:8081  \
 -e JASYPT_KEY='jasyptCode' \
 -v "/$(pwd)/application/src/main/resources/application.properties:/application/application.properties" \
-my-service:1.0 \                                                                                                                                                                             ─
+my-service:1.0 \
 --spring.config.additional-location=file:/application/application.properties
 ```
 ### Check the image
