@@ -240,12 +240,13 @@ We have 2 options:
 ### Deploy Helm Chart in minikube
 Some Helm commands that you might want to use
 ```bash
-helm install hazelcast-poc platform/helm/my-service 
+helm install hazelcast-poc platform/helm/my-service #execute this one
 helm upgrade hazelcast-poc platform/helm/my-service 
 helm rollback hazelcast-poc 
 helm uninstall hazelcast-poc
 ```
-
+![Pods](./images/pods.png)
+![Services](./images/services.png)
 Shell into one pod and test the DNS. You should see your 2 pods
 ```bash
 I have no name!@my-service-679d747874-vklld:/application$ nslookup hazelcast-dns
@@ -282,7 +283,7 @@ Before that enable minikube ingress tunneling:
 ```bash
 minikube tunnel
 ```
-
+![Ingress](./images/ingress.png)
 ```bash
 curl http://localhost/mega/actuator/loggers/root
 # {"effectiveLevel":"INFO"}
