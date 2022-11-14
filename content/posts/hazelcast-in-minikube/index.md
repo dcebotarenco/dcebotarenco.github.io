@@ -2,11 +2,12 @@
 title: "⛅ Hazelcast in minikube"
 date: 2022-11-09T19:00:00+02:00
 draft: false
+toc: true
 cover:
-  image: "./images/config.png"
-  alt: "⛅ Hazelcast in minikube"
-  caption: "⛅ Hazelcast in minikube"
-  relative: true
+    image: ./images/config.png.Resize "520x320"
+    alt: "⛅ Hazelcast in minikube"
+    caption: "⛅ Hazelcast in minikube"
+    relative: true
 ---
 
 # Build a Spring-boot Hazelcast cluster in Kubernetes
