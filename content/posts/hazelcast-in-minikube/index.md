@@ -3,7 +3,7 @@ title: "⛅ Hazelcast in minikube"
 date: 2022-11-09T19:00:00+02:00
 draft: false
 cover:
-  image: "./config.png"
+  image: "./images/config.png"
   alt: "⛅ Hazelcast in minikube"
   caption: "⛅ Hazelcast in minikube"
   relative: true
