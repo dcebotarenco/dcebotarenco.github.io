@@ -4,7 +4,7 @@ date: 2022-11-09T19:00:00+02:00
 draft: false
 toc: true
 cover:
-    image: ./images/config.png.Resize "520x320"
+    image: images/thumbnail.png
     alt: "⛅ Hazelcast in minikube"
     caption: "⛅ Hazelcast in minikube"
     relative: true
