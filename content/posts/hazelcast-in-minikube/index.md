@@ -132,7 +132,7 @@ minikube addons enable ingress #for ingress
 minikube addons enable registry #for registry 
 ```
 ### Publish docker image
-Usually, Helm will fetch it from a container registry. Be we cannot. If we deploy now the Chart, Helm won't see the docker image
+Usually, Helm will fetch it from a container registry. If we deploy now the Chart, Helm won't see the docker image.
 We have 2 options:
 1. [The easy way](https://minikube.sigs.k8s.io/docs/handbook/pushing/#7-loading-directly-to-in-cluster-container-runtime). Upload the image manually from the host into minikube 
 2. The hard way. Create a registry. Details here: 
@@ -169,7 +169,7 @@ service:
   externalPort: "8081"
   internalPort: "8081"
 ```
-The placeholders are automatically resolved by Helm
+The placeholders are automatically resolved by Helm. `deployoment.yaml`
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -220,7 +220,7 @@ spec:
             periodSeconds: 30
             timeoutSeconds: 6
 ```
-ingress.yaml. Open access to service under a certain path using rewrite-target, regex group $2
+ Open access to service under a certain path using rewrite-target, regex group $2 - `ingress.yaml`
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
