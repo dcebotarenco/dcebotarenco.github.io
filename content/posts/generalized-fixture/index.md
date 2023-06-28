@@ -267,6 +267,8 @@ I would think twice if I have to extract it in a _Test Helper_ aka _Object Mothe
 We are at the cross roads if we have to share the same data structure and state or not. We either might fall into a standard/general
 fixture setup for 2 use cases, or we have code duplication in both use cases. Choose wisely..
 
+![minimal-fixture.png](images/minimal-fixture.png)
+
 How i'd have it:
 ```java
 package project.space.earth.feature1;
