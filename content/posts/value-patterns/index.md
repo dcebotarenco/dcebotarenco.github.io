@@ -3,6 +3,10 @@ title: "Testing Value Patterns"
 date: 2023-06-30T22:10:52+03:00
 draft: false
 ---
+## tltr
+Move away from literals if possible. Divert and generate values.
+
+---
 
 ## How do we specify the values to be used in tests?
 The values assigned to the attributes of objects in our test fixture and the expected outcome of our test are frequently interconnected, as defined in the requirements. It is vital to accurately determine these values and understand the relationship between the pre-conditions and post-conditions. This relationship plays a critical role in ensuring the correct behavior is incorporated into the System Under Test (SUT).

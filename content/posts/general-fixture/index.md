@@ -4,6 +4,11 @@ date: 2023-06-10T21:23:48+03:00
 draft: false
 ---
 
+## tltr
+Build Minimal.
+
+---
+
 My opinion based on references:
 
 * **xUnit Test Patterns** book by _Gerard Meszaros_

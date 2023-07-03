@@ -3,6 +3,10 @@ title: "Fixture Strategy Management"
 date: 2023-06-28T21:23:48+03:00
 draft: false
 ---
+## tltr
+Refactor code from testcase by class to testcase by fixture
+
+---
 
 My opinion based on references:
 
