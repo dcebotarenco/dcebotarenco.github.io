@@ -18,7 +18,8 @@
       <pubDate>Fri, 30 Jun 2023 22:10:52 +0300</pubDate>
       
       <guid>https://dcebotarenco.github.io/posts/value-patterns/</guid>
-      <description>How do we specify the values to be used in tests? The values assigned to the attributes of objects in our test fixture and the expected outcome of our test are frequently interconnected, as defined in the requirements. It is vital to accurately determine these values and understand the relationship between the pre-conditions and post-conditions. This relationship plays a critical role in ensuring the correct behavior is incorporated into the System Under Test (SUT).</description>
+      <description>tltr Move away from literals if possible. Divert and generate values.
+How do we specify the values to be used in tests? The values assigned to the attributes of objects in our test fixture and the expected outcome of our test are frequently interconnected, as defined in the requirements. It is vital to accurately determine these values and understand the relationship between the pre-conditions and post-conditions. This relationship plays a critical role in ensuring the correct behavior is incorporated into the System Under Test (SUT).</description>
     </item>
     
     <item>
@@ -27,9 +28,10 @@
       <pubDate>Wed, 28 Jun 2023 21:23:48 +0300</pubDate>
       
       <guid>https://dcebotarenco.github.io/posts/fixture-strategy-management/</guid>
-      <description>My opinion based on references:
+      <description>tltr Refactor code from testcase by class to testcase by fixture
+My opinion based on references:
 xUnit Test Patterns book by Gerard Meszaros Test Drive Development: By Example by Kent Beck. Growing Object-Oriented Software, Guided by Tests by Steve Freeman, Nat Pryce Object Mother ObjectMother - Easing Test Object Creation in XP The post contains text snippets from books.
-Testcase Class per what? - Fixture Strategy Management How do we organize our Test Methods onto Testcase Classes? There are a couple of ways to organize tests.</description>
+Testcase Class per what? - Fixture Strategy Management How do we organize our Test Methods onto Testcase Classes?</description>
     </item>
     
     <item>
@@ -38,9 +40,10 @@ Testcase Class per what? - Fixture Strategy Management How do we organize our Te
       <pubDate>Sat, 10 Jun 2023 21:23:48 +0300</pubDate>
       
       <guid>https://dcebotarenco.github.io/posts/general-fixture/</guid>
-      <description>My opinion based on references:
+      <description>tltr Build Minimal.
+My opinion based on references:
 xUnit Test Patterns book by Gerard Meszaros Test Drive Development: By Example by Kent Beck. Growing Object-Oriented Software, Guided by Tests by Steve Freeman, Nat Pryce Object Mother ObjectMother - Easing Test Object Creation in XP The post contains text snippets from books.
-Let&amp;rsquo;s define &amp;lsquo;fixture&amp;rsquo; The test fixture is everything we need to have to set up in order to exercise the SUT. It includes at least an instance of the class whose method we are testing.</description>
+Let&amp;rsquo;s define &amp;lsquo;fixture&amp;rsquo; The test fixture is everything we need to have to set up in order to exercise the SUT.</description>
     </item>
     
     <item>
