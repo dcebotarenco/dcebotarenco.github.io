@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2023 21:23:48 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jun 2023 22:10:52 +0300</lastBuildDate><atom:link href="https://dcebotarenco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing Value Patterns</title>
+      <link>https://dcebotarenco.github.io/posts/value-patterns/</link>
+      <pubDate>Fri, 30 Jun 2023 22:10:52 +0300</pubDate>
+      
+      <guid>https://dcebotarenco.github.io/posts/value-patterns/</guid>
+      <description>How do we specify the values to be used in tests? The values assigned to the attributes of objects in our test fixture and the expected outcome of our test are frequently interconnected, as defined in the requirements. It is vital to accurately determine these values and understand the relationship between the pre-conditions and post-conditions. This relationship plays a critical role in ensuring the correct behavior is incorporated into the System Under Test (SUT).</description>
+    </item>
+    
     <item>
       <title>Fixture Strategy Management</title>
       <link>https://dcebotarenco.github.io/posts/fixture-strategy-management/</link>
