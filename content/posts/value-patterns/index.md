@@ -24,7 +24,7 @@ class Test{
         Player player = new Player("Name", "Surname");
         player.jersey = new Jersey("Initials", 10);
         
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
         
         PlayerDto actualPlayer = sut.getPlayer();
         
@@ -64,7 +64,7 @@ class Test {
         int jerseyNumber = 10;
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
 
         PlayerDto actualPlayer = sut.getPlayer();
 
@@ -91,7 +91,7 @@ class Test{
         int jerseyNumber = 10;
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
 
         PlayerDto actualPlayer = sut.getPlayer();
 
@@ -132,7 +132,7 @@ class Test{
         int jerseyNumber = 10;
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
 
         PlayerDto actualPlayer = sut.getPlayer();
 
@@ -160,7 +160,7 @@ class Test{
         int jerseyNumber = 10;
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
 
         PlayerDto actualPlayer = sut.getPlayer();
 
@@ -204,7 +204,7 @@ class Test{
         String initials = String.valueOf(name.charAt(0)) + surname.charAt(0);
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player);
 
         PlayerDto actualPlayer = sut.getPlayer();
 
@@ -232,7 +232,7 @@ class Test{
         String initials = String.valueOf(name.charAt(0)) + surname.charAt(0);
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
 
         PlayerDto actualPlayer = sut.getPlayer();
 
@@ -259,7 +259,7 @@ class Test{
         String initials = String.valueOf(name.charAt(0)) + surname.charAt(0);
         player.jersey = new Jersey(initials, jerseyNumber);
 
-        when(repo.findBy(player.jersay.number)).thenReturn(player); //test eq() vs any()
+        when(repo.findBy(player.jersay.number)).thenReturn(player); 
 
         PlayerDto actualPlayer = sut.getPlayer();
 
